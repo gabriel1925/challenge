@@ -24,6 +24,7 @@ input,select{
 }
 .center{
 	width: 100%;
+	text-align: center;
 }
 .btn-white{
     display: inline-block;
