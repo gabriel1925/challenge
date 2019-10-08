@@ -25,9 +25,8 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 }).addTo(mymap);
 
 var marker = L.marker([latitud,longitud]).addTo(mymap);
-marker.bindPopup("<h2>("+latitud+","+longitud+")</h2><br /><h3>"+direccion+"</h3><br /><h3>"+descripcion+"</h3><br /><h3>"+telefono+"</h3>"+"<br /><h3>"+categoria+"</h3>");
+marker.bindPopup("<h2>("+latitud+","+longitud+")</h2><br /><h3>"+direccion+"</h3><br /><h3>"+descripcion+"</h3><br /><h3>"+telefono+"</h3>"+"<br /><h3>"+categoria+"</h3>").openPopup();
 }
-var popup = L.popup();
 // capturo la longitud y latitud
 function capturalatlng(e) {
 	// console.log(e);

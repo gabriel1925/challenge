@@ -15,25 +15,27 @@
 
 </head>
 <body>
-	<form action="#">
-		<input type="text" name="descripcion" id="descripcion-map" placeholder="Descripcion" required>
-		<input type="direccion" name="direccion" id="direccion-map"placeholder="Dirección" required>
-		<input type="tel" name="telefono" id="telefono-map" placeholder="Telefono" list="lista" required>
-		<select name="categoria" id="categoria-map">
-			<option value="comercial">comercial</option>
-			<option value="recidencial">recidencial</option>
-			<option value="mixta">mixta</option>
-		</select>
-		<input type="number" name="latitud" id="latitud-map" placeholder="Latitud" required value="-32.902530">
-		<input type="number" name="longitud" id="longitud-map" placeholder="Longitud" required value="-68.878391">
+	<div class="center">
+		<form action="#" class="form ">
+			<input type="text" name="descripcion" id="descripcion-map" placeholder="Descripcion" required>
+			<input type="direccion" name="direccion" id="direccion-map"placeholder="Dirección" required>
+			<input type="tel" name="telefono" id="telefono-map" placeholder="Telefono" list="lista" required>
+			<select name="categoria" id="categoria-map">
+				<option value="comercial">comercial</option>
+				<option value="recidencial">recidencial</option>
+				<option value="mixta">mixta</option>
+			</select>
+			<input type="number" name="latitud" id="latitud-map" placeholder="Latitud" required value="-32.902530">
+			<input type="number" name="longitud" id="longitud-map" placeholder="Longitud" required value="-68.878391">
 
-		<datalist id="lista">
-			<option value="261"></option>
-			<option value="011"></option>
-		</datalist>
-		<button onclick="agregar()">Agregar</button>
-		<!-- <button onclick="borrar()">borrar</button> -->
-	</form>
+			<datalist id="lista">
+				<option value="261"></option>
+				<option value="011"></option>
+			</datalist>
+			<button onclick="agregar()" class="btn btn-white">Agregar</button>
+			<!-- <button onclick="borrar()">borrar</button> -->
+		</form>
+	</div>
 	<div id="mapid">
 		
 	</div>
