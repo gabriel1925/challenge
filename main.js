@@ -19,7 +19,7 @@ function agregar(){
 	var categoria = document.getElementById("categoria-map").value;
 
 	if (descripcion==""){
-		alert("coclocar descripcion");
+		alert("colocar descripcion");
 	}else{
 		if (direccion=="") {
 			alert("colocar direccion");
