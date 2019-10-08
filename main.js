@@ -33,8 +33,8 @@ function capturalatlng(e) {
 	// console.log(e);
 	var longi = document.getElementById("longitud-map");
 	var lati = document.getElementById("latitud-map");
-	longi.value=trunc(e.latlng.lng,5);
-	lati.value=trunc(e.latlng.lat,5);
+	longi.value=trunc(e.latlng.lng,4);
+	lati.value=trunc(e.latlng.lat,4);
 
 }
 
