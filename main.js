@@ -49,6 +49,3 @@ function trunc (x, posiciones = 0) {
   var numStr = s.substr(0, decimalLength + posiciones)
   return Number(numStr)
 }
-function borrar(){
-	
-}
