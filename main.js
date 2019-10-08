@@ -3,6 +3,7 @@ var lon=-68.878391;
 
 var mymap = L.map('mapid').setView([lat, lon], 13);
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
 	maxZoom: 18,
 	id: 'mapbox.streets',
 	accessToken: 'pk.eyJ1IjoiZ2FicmllbDE5MjUiLCJhIjoiY2sxaGlzbXVqMDd5bDNicGs1d2x0Y2h5MiJ9.k3AyJEXdfRX7Ai5MdXGasQ'
@@ -10,22 +11,36 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 // var marker = L.marker([lat,lon]).addTo(mymap);
 // marker.bindPopup("<b>hola soy un popup</b><br />Estoy bien chido");
 function agregar(){
-var descripcion = document.getElementById("descripcion-map").value;
-var direccion = document.getElementById("direccion-map").value;
-var telefono = document.getElementById("telefono-map").value;
-var longitud = document.getElementById("longitud-map").value;
-var latitud = document.getElementById("latitud-map").value;
-var categoria = document.getElementById("categoria-map").value;
+	var descripcion = document.getElementById("descripcion-map").value;
+	var direccion = document.getElementById("direccion-map").value;
+	var telefono = document.getElementById("telefono-map").value;
+	var longitud = document.getElementById("longitud-map").value;
+	var latitud = document.getElementById("latitud-map").value;
+	var categoria = document.getElementById("categoria-map").value;
 
-this.mymap.setView([latitud, longitud], 13);
-L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-	maxZoom: 18,
-	id: 'mapbox.streets',
-	accessToken: 'pk.eyJ1IjoiZ2FicmllbDE5MjUiLCJhIjoiY2sxaGlzbXVqMDd5bDNicGs1d2x0Y2h5MiJ9.k3AyJEXdfRX7Ai5MdXGasQ'
-}).addTo(mymap);
+	if (descripcion==""){
+		alert("coclocar descripcion");
+	}else{
+		if (direccion=="") {
+			alert("colocar direccion");
+		}else{
+			if (telefono="") {
+				alert("colocar telefono");
+			}else{
+				mymap.setView([latitud, longitud], 13);
+				L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+					attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+					maxZoom: 18,
+					id: 'mapbox.streets',
+					accessToken: 'pk.eyJ1IjoiZ2FicmllbDE5MjUiLCJhIjoiY2sxaGlzbXVqMDd5bDNicGs1d2x0Y2h5MiJ9.k3AyJEXdfRX7Ai5MdXGasQ'
+				}).addTo(mymap);
 
-var marker = L.marker([latitud,longitud]).addTo(mymap);
-marker.bindPopup("<h2>("+latitud+","+longitud+")</h2><br /><h3>"+direccion+"</h3><br /><h3>"+descripcion+"</h3><br /><h3>"+telefono+"</h3>"+"<br /><h3>"+categoria+"</h3>").openPopup();
+				var marker = L.marker([latitud,longitud]).addTo(mymap);
+				marker.bindPopup("<h2>("+latitud+","+longitud+")</h2><h3>"+direccion+"</h3><h3>"+descripcion+"</h3><h3>"+telefono+"</h3>"+"<h3>"+categoria+"</h3>").openPopup();
+				console.log(marker);
+			}
+		}
+	}
 }
 // capturo la longitud y latitud
 function capturalatlng(e) {
