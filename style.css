@@ -19,8 +19,10 @@ input,select{
 	display: inline-block;
 	padding: 3px;
 	color:#303030;
-	border-radius:0 10px;
+	border-radius:5px;
 	box-shadow: 0 0 2px #eee;
+	margin-right: 4px;
+	margin-bottom: 5px;
 }
 .center{
 	width: 100%;
@@ -48,4 +50,8 @@ input,select{
 .btn-white:hover{
     background: #444;
     color: white;
+}
+h1{
+	border-bottom: 1px solid red;
+	padding-bottom: 10px;
 }
