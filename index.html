@@ -17,6 +17,7 @@
 <body>
 	<div class="center">
 		<h1>Challenge</h1>
+		<form class="form ">
 			<input type="text" name="descripcion" id="descripcion-map" placeholder="Descripcion" required>
 			<input type="direccion" name="direccion" id="direccion-map"placeholder="Dirección" required>
 			<input type="tel" name="telefono" id="telefono-map" placeholder="Telefono" list="lista" required>
@@ -32,8 +33,9 @@
 				<option value="261"></option>
 				<option value="011"></option>
 			</datalist>
-			<button onclick="agregar()" class="btn btn-white">Agregar</button>
 			<!-- <button onclick="borrar()">borrar</button> -->
+		</form>
+			<button onclick="agregar()" class="btn btn-white">Agregar</button>
 	</div>
 	<div id="mapid">
 		
